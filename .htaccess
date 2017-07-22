@@ -1,0 +1,9 @@
+#RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^thinktub.tk$ [NC,OR]
+#RewriteCond %{HTTP_HOST} ^www.thinktub.tk$
+#RewriteCond %{REQUEST_URI} !public/
+#RewriteRule (.*) /public/$1 [L]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
