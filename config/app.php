@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'development'),
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://www.thinktub.tk'),
+    'url' => env('APP_URL', 'http://dev.thinktub.tk/noyyal/'),
 
     /*
     |--------------------------------------------------------------------------
