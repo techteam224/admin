@@ -3491,6 +3491,8 @@ return array(
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
     'Webmozart\\Assert\\Assert' => $vendorDir . '/webmozart/assert/src/Assert.php',
     'XdgBaseDir\\Xdg' => $vendorDir . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+    'Yajra\\Auditable\\AuditableTrait' => $vendorDir . '/yajra/laravel-auditable/src/AuditableTrait.php',
+    'Yajra\\Auditable\\AuditableTraitObserver' => $vendorDir . '/yajra/laravel-auditable/src/AuditableTraitObserver.php',
     'Yajra\\Datatables\\Contracts\\DataTableEngineContract' => $vendorDir . '/yajra/laravel-datatables-oracle/src/Contracts/DataTableEngineContract.php',
     'Yajra\\Datatables\\Datatables' => $vendorDir . '/yajra/laravel-datatables-oracle/src/Datatables.php',
     'Yajra\\Datatables\\DatatablesServiceProvider' => $vendorDir . '/yajra/laravel-datatables-oracle/src/DatatablesServiceProvider.php',

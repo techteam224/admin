@@ -34,6 +34,7 @@ class ComposerStaticInitae24546ff12f6cce6aa794f32c7d150a
         'Y' => 
         array (
             'Yajra\\Datatables\\' => 17,
+            'Yajra\\Auditable\\' => 16,
         ),
         'X' => 
         array (
@@ -146,6 +147,10 @@ class ComposerStaticInitae24546ff12f6cce6aa794f32c7d150a
         'Yajra\\Datatables\\' => 
         array (
             0 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
+        ),
+        'Yajra\\Auditable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yajra/laravel-auditable/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -3870,6 +3875,8 @@ class ComposerStaticInitae24546ff12f6cce6aa794f32c7d150a
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'Yajra\\Auditable\\AuditableTrait' => __DIR__ . '/..' . '/yajra/laravel-auditable/src/AuditableTrait.php',
+        'Yajra\\Auditable\\AuditableTraitObserver' => __DIR__ . '/..' . '/yajra/laravel-auditable/src/AuditableTraitObserver.php',
         'Yajra\\Datatables\\Contracts\\DataTableEngineContract' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Contracts/DataTableEngineContract.php',
         'Yajra\\Datatables\\Datatables' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Datatables.php',
         'Yajra\\Datatables\\DatatablesServiceProvider' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/DatatablesServiceProvider.php',
