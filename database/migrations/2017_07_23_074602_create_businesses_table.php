@@ -18,13 +18,17 @@ class CreateBusinessesTable extends Migration
             $table->string('buss_name',100)->unique();
             $table->string('buss_owner_name',50);
             $table->string('email')->unique();
+            $table->integer('busstype')->unsigned();
             $table->string('password');
             $table->rememberToken();
             $table->boolean('subscription_state');
             $table->timestamp('subscription_expires');
             $table->timestamps();
-            $table->integer('created_by')->references('id')->on('users');
-            $table->integer('updated_by')->references('id')->on('users');
+            $table->integer('created_by')->unsigned();
+            $table->integer('updated_by')->unsigned();
+
+
+
         });
     }
 
