@@ -16,8 +16,8 @@ class UpdateForeignkeyTables extends Migration
         Schema::table('users', function (Blueprint $table) {
             //
             $table->foreign('role')->references('id')->on('roles');
-            $table->foreign('created_by')->references('id')->on('users');
-            $table->foreign('updated_by')->references('id')->on('users');
+            $table->foreign('created_by')->nullable()->references('id')->on('users');
+            $table->foreign('updated_by')->nullable()->references('id')->on('users');
 
         });
 
@@ -47,8 +47,8 @@ class UpdateForeignkeyTables extends Migration
 
         Schema::table('roles', function (Blueprint $table) {
             //
-            $table->foreign('created_by')->references('id')->on('users');
-            $table->foreign('updated_by')->references('id')->on('users');
+            $table->foreign('created_by')->nullable()->references('id')->on('users');
+            $table->foreign('updated_by')->nullable()->references('id')->on('users');
 
         });
 
