@@ -20,5 +20,6 @@ class AdminUsers extends Seeder
             'created_by' => 1,
             'updated_by' => 1
         ]);
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
     }
 }
