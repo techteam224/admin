@@ -14,7 +14,7 @@ class AdminUsers extends Seeder
     	DB::statement('SET FOREIGN_KEY_CHECKS=0');
         DB::table('users')->insert([
             'name' => 'The Think Tub',
-            'email' => 'thinktub224@gmail.com',
+            'email' => 'techteam224@gmail.com',
             'password' => bcrypt('lonewolf'),
             'role' => 1,
             'created_by' => 1,
