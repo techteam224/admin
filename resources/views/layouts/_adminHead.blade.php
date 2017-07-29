@@ -11,11 +11,11 @@
 
     <title> @yield('pageTitle') - Noyyal Online Services</title>
 
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('font-awesome/css/font-awesome.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/plugins/morris/morris-0.4.3.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/plugins/morris/morris-0.4.3.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/animate.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
 
 </head>
 <body>

@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://dev.thinktub.tk/'),
+    'url' => env('APP_URL', 'https://dev.thinktub.tk/'),
 
     /*
     |--------------------------------------------------------------------------
