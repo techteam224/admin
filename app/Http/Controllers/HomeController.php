@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User as Users;
 class HomeController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
+
+        $this->middleware('auth');
     }
 
     /**
@@ -21,12 +22,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('pages.adminDashboard');
-    }
-    public function index1()
-    {
-        return 'hello';
+        $userData = session('thinktub-Auth-Data');
+        $userDetails = Users::where('email',$userData['email'])->first();
+        return view('pages.adminDashboard')->with('userDetails',$userDetails);
     }
 }

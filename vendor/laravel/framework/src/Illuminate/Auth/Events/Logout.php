@@ -24,5 +24,6 @@ class Logout
     public function __construct($user)
     {
         $this->user = $user;
+        session(['thinktub-Auth-Data'=>'']);
     }
 }
