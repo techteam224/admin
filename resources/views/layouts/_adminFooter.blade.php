@@ -36,7 +36,7 @@
 
 <!-- ChartJS-->
 <script src="{{ secure_asset('js/plugins/chartJs/Chart.min.js') }}"></script>
-
+@yield('scripts')
 <script>
     $(document).ready(function() {
 
