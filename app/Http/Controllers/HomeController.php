@@ -1,11 +1,16 @@
 <?php
 namespace App\Http\Controllers;
 
+/*      INCLUDING REQUIRED SYSTEM PACKAGES    */
 use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
+
+/*      INCLUDING REQUIRED USER MODEL PACKAGES    */
 use App\User as Users;
 use App\Businesse as Clients;
+use App\Busscategorie as BussCat;
 use App\Busstype as BussTypes;
 use App\Transaction as Trans;
 
@@ -28,7 +33,9 @@ class HomeController extends Controller
     public function listAllClients()
     {
         $clientData = Clients::get();
-        return $this->sendOutputDisplay('pages.manageClients', $clientData);
+        $bussCat    = $this->getAllBussCat();
+        $bussTypes  = $this->getAllBussTypes();
+        return $this->sendOutputDisplay('pages.manageClients', [$clientData, $bussCat, $bussTypes]);
     }
 
 
@@ -54,7 +61,24 @@ class HomeController extends Controller
 *
 *
 */
+
+    private function getAllBussCat()
+    {
+
+        return Cache::remember('busscat', 3600, function(){
+            return BussCat::get();
+        });
+    }
+
+    private function getAllBussTypes()
+    {
+        return Cache::remember('busstypes', 3600, function(){
+            return BussTypes::get();
+        });
+    }
+
     private function sendOutputDisplay($viewToLoad, $dataToLoad = array('&nbsp;')){
+
         $this->getLoggedInUserDetails();
         if(View::exists($viewToLoad)){
             return view($viewToLoad)->with([ 'userDetails'=>$this->userDetails, 'dataFromController'=> $dataToLoad ]);

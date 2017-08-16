@@ -13,6 +13,7 @@ class CreateBusscategoriesTable extends Migration
      */
     public function up()
     {
+        
         Schema::create('busscategories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('category');

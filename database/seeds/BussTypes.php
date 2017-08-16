@@ -62,7 +62,7 @@ class BussTypes extends Seeder
 			[  
 			'id' =>2005, 
 			'type' => 'Memorabilia', 
-			'category' => 100, 
+			'category' => 1000, 
 			'created_at' => Carbon::now(),  
 			'updated_at' => Carbon::now(),  
 			'created_by' => 1,  

@@ -13,6 +13,7 @@ class UpdateForeignkeyTables extends Migration
      */
     public function up()
     {
+        
         Schema::table('users', function (Blueprint $table) {
             //
             $table->foreign('role')->references('id')->on('roles');
@@ -23,6 +24,7 @@ class UpdateForeignkeyTables extends Migration
 
         Schema::table('businesses', function (Blueprint $table) {
             //
+            $table->foreign('busscategory')->references('id')->on('busscategories');
             $table->foreign('busstype')->references('id')->on('busstypes');
             $table->foreign('created_by')->references('id')->on('users');
             $table->foreign('updated_by')->references('id')->on('users');
@@ -54,7 +56,7 @@ class UpdateForeignkeyTables extends Migration
 
 
         Schema::table('busstypes', function (Blueprint $table) {
-            //
+            $table->unique(['type','category']);
             $table->foreign('category')->references('id')->on('busscategories');
             $table->foreign('created_by')->references('id')->on('users');
             $table->foreign('updated_by')->references('id')->on('users');

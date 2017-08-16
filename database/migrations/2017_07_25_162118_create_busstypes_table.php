@@ -13,9 +13,10 @@ class CreateBusstypesTable extends Migration
      */
     public function up()
     {
+        
         Schema::create('busstypes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('type')->unique();
+            $table->string('type');
             $table->integer('category')->unsigned();
             $table->timestamps();
             $table->integer('created_by')->unsigned();

@@ -13,7 +13,7 @@ class CreateTransactionmodesTable extends Migration
      */
     public function up()
     {
-        //
+        
          Schema::create('transactionmodes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('mode',50)->unique();

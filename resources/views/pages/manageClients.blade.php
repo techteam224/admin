@@ -1151,7 +1151,9 @@
 		<p>Important notes to admin user about addition.</p>
 		<form id="form" action="#" class="wizard-big">
 			<!-- step 1 -->
-			<h1>Business Details</h1>
+			<h1>Business</h1>
+			<?php //print_r($dataFromController[1]);
+			?>
 			<fieldset>
 				<h2>Business Information</h2>
 				<div class="row">
@@ -1161,12 +1163,28 @@
 							<input id="bussName" name="bussName" type="text" class="form-control required">
 						</div>
 						<div class="form-group">
+							<label>Business Category *</label>
+							<select id="bussCategory" name="bussCategory" class="form-control required">
+							@foreach ($dataFromController[1] as $a)
+								<option value="{{ $a->id }}">{{ $a->category }}</option>
+							@endforeach
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Business Sub-Category *</label>
+							<select id="bussType" name="bussType" class="form-control required">
+							@foreach ($dataFromController[2] as $a)
+								<option value="{{ $a->id }}">{{ $a->type }}</option>
+							@endforeach
+							</select>
+						</div>
+						<div class="form-group">
 							<label>Business Address *</label>
 							<input id="bussAddress" name="bussAddress" type="text" class="form-control required">
 						</div>
 						<div class="form-group">
-							<label>Business Category *</label>
-							<input id="bussCategory" name="bussCategory" type="text" class="form-control required">
+							<label>Business Telephone *</label>
+							<input id="bussContact" name="bussContact" type="number" maxlength="12" class="form-control required">
 						</div>
 					</div>
 					<div class="col-lg-4">
@@ -1180,7 +1198,7 @@
 			</fieldset>
 
 			<!-- step 2 -->
-			<h1>Owner Details</h1>
+			<h1>Owner</h1>
 			<fieldset>
 				<h2>Owner Information</h2>
 				<div class="row">

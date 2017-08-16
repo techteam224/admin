@@ -23,8 +23,8 @@ class DatabaseSeeder extends Seeder
         $this->pStatus('4) Bussiness Types ');
         $this->call(BussTypes::class);
 
-        $this->pStatus('4) Temporary Bussiness Subscribers ');
-        $this->call(TempClients::class);
+        //$this->pStatus('4) Temporary Bussiness Subscribers ');
+        //$this->call(TempClients::class);
     }
 
     private function pStatus($value='')
