@@ -16,7 +16,7 @@
     <link href="{{ secure_asset('css/plugins/morris/morris-0.4.3.min.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/animate.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
-
+    @yield('styles')
 </head>
 <body>
     <div id="wrapper">
